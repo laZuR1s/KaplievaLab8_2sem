@@ -43,7 +43,7 @@ void DLIST::create_by_order(std::ifstream& file, std::function<bool(int, int)> c
 	auto find_place = [this, compare](TInfo elem) -> ptrDNODE
 		{
 			ptrDNODE p = head;
-			while (p && compare((*(p->info)).get_region(), (*elem).get_region()))
+			while (p && compare((*(p->info)).get_region(), (*elem).get_region())&& strcmp(p->info->get_firm(), (*elem).get_firm())!=0)
 			{
 				p = p->next;
 			}
