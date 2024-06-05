@@ -6,11 +6,8 @@ struct DLIST
 {
 private:
 	ptrDNODE head, tail;
-	//size_t size;
 public:
 	DLIST() { head = nullptr, tail = nullptr; }
-	//DLIST(std::ifstream& file);
-	//DLIST(std::ifstream& file1);
 	void first_node(TInfo elem);
 	bool empty();
 	void create_by_order(std::ifstream& file, std::function<bool(int, int)> compare);
@@ -25,6 +22,4 @@ public:
 	ptrDNODE get_head();
 	ptrDNODE get_tail();
 	TInfo get_elem(const ptrDNODE ptr);
-	//void sort(ptrDNODE begin, ptrDNODE right, std::function<bool(TInfo, TInfo)> compare);
-
 };

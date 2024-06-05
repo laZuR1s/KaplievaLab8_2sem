@@ -26,13 +26,13 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="STRUCT.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="DLIST.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="DNODE.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="STRUCT.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

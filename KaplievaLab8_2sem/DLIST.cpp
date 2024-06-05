@@ -1,41 +1,5 @@
 #include "DLIST.h"
 
-//DLIST::DLIST(std::ifstream& file)
-//{
-//	TInfo bus = new BUS(file);
-//	first_node(bus);
-//	while (!file.eof())
-//	{
-//		bus = new BUS(file);
-//		insert_after(tail, bus);
-//	}
-//	file.close();
-//}
-
-//DLIST::DLIST(std::ifstream& file)
-//{
-//	TInfo bus = new BUS(file);
-//	first_node(bus);
-//	auto find_place = [this](TInfo elem) ->ptrDNODE
-//		{
-//			ptrDNODE p = head;
-//			while (p && strcmp((*(p->info)).get_firm(), (*elem).get_firm())>=0)
-//				p = p->next;
-//			return p;
-//		};
-//	ptrDNODE place{};
-//	while (!file.eof())
-//	{
-//		bus = new BUS(file);
-//		place = find_place(bus);
-//		if (place)
-//			insert_before(place, bus);
-//		else
-//			insert_after(tail, bus);
-//	}
-//	file.close();
-//}
-
 void DLIST::create_by_order(std::ifstream& file, std::function<bool(int, int)> compare)
 {
 	TInfo bus = new BUS(file);
@@ -43,7 +7,7 @@ void DLIST::create_by_order(std::ifstream& file, std::function<bool(int, int)> c
 	auto find_place = [this, compare](TInfo elem) -> ptrDNODE
 		{
 			ptrDNODE p = head;
-			while (p && compare((*(p->info)).get_region(), (*elem).get_region())&& strcmp(p->info->get_firm(), (*elem).get_firm())!=0)
+			while (p && compare((*(p->info)).get_region(), (*elem).get_region()))
 			{
 				p = p->next;
 			}

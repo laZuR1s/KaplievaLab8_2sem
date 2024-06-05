@@ -18,12 +18,5 @@ public:
 	int get_region();
 	char* get_firm();
 	char* get_number();
-	/*int setDiagnosis();
-	int setDay();
-	int setMonth();
-	int setYear();
-	int setNWorkingDays();
-	void setSurnane(char surname[m]);
-	void setName(char name[m]);
-	void setPatronymic(char patronymic[m]);*/
+
 };
