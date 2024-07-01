@@ -17,7 +17,7 @@ public:
 	void remove_after(const ptrDNODE& ptr);
 	void remove_before(const ptrDNODE& ptr);
 	void remove(ptrDNODE& ptr);
-	void print();
+	void print(std::ostream& stream = std::cout);
 	~DLIST();
 	ptrDNODE get_head();
 	ptrDNODE get_tail();

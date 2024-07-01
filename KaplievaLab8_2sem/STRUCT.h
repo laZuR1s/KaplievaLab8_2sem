@@ -13,10 +13,9 @@ private:
 public:
 	BUS() {}
 	BUS(std::ifstream& file);
-	void print();
+	void print(std::ostream& stream=std::cout);
 	int compare(const BUS& bus);
 	int get_region();
 	char* get_firm();
-	char* get_number();
 
 };

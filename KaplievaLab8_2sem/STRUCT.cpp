@@ -18,15 +18,15 @@ BUS::BUS(std::ifstream& file)
 	}
 }
 
-void BUS::print()
+void BUS::print(std::ostream& stream)
 {
-	std::cout << region << '\n';
-	std::cout << number<< '\n';
-	std::cout << firm<< '\n';
-	std::cout << FIO<< '\n';
-	std::cout << num_route<< '\n';
-	std::cout << status<< '\n';
-	std::cout << "-----------------\n";
+	stream<< region << '\n';
+	stream << number<< '\n';
+	stream << firm<< '\n';
+	stream << FIO<< '\n';
+	stream << num_route<< '\n';
+	stream << status<< '\n';
+	stream << "-----------------\n";
 }
 
 int BUS::compare(const BUS& bus)

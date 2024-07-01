@@ -140,12 +140,12 @@ void DLIST::remove(ptrDNODE& ptr)
 	delete p;
 }
 
-void DLIST::print()
+void DLIST::print(std::ostream& stream)
 {
 	ptrDNODE p = head;
 	while (p)
 	{
-		p->info->print();
+		p->info->print(stream);
 		p = p->next;
 
 	}
